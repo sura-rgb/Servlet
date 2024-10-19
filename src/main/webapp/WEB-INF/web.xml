@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+<!-- display name에 Servlet을 저장하는느낌 -->
+  <display-name>Servlet</display-name>
+  <servlet>
+  <!-- xml 데이터를 저장하기 위한 문법 -->
+  	<!-- 우리가 만든 클래스의 이름지정 -->
+  	<servlet-name>hello</servlet-name>
+  	<!-- 만들었던 클래스,해당프로젝트가 하나만있는게 아닐수
+  			있기때문에 경로까지 넣어주기-->
+  	<servlet-class>com.marondal.servlet.hello.HelloController</servlet-class>
+  	<!-- 경로의 클래스가 hello라는 이름으로 서블릿이라는 단위로 만들어진것 -->
+  </servlet>
+  
+  <servlet-mapping>
+  	<!-- 여기서는 hello를 사용하겠다는것 -->
+  	<servlet-name>hello</servlet-name>
+  	<!-- 주소설정, 해당주소로 이용할수있게끔한다 -->
+  	<url-pattern>/hello</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>ex01</servlet-name>
+  	<servlet-class>com.marondal.servlet.servlet.ex.Ex01Controller</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>ex01</servlet-name>
+  	<url-pattern>/servlet/ex01</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>test01</servlet-name>
+  	<servlet-class>com.marondal.servlet.servlet.test.Test01</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>test01</servlet-name>
+  	<url-pattern>/servlet/test01</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>test02</servlet-name>
+  	<servlet-class>com.marondal.servlet.servlet.test.Test02</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>test02</servlet-name>
+  	<url-pattern>/servlet/test02</url-pattern>
+  </servlet-mapping>
+</web-app>
