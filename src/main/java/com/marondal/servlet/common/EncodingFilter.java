@@ -2,6 +2,7 @@ package com.marondal.servlet.common;
 
 import java.io.IOException;
 
+
 import javax.servlet.Filter;
 import javax.servlet.FilterChain;
 import javax.servlet.ServletException;
@@ -20,5 +21,7 @@ public class EncodingFilter implements Filter{
 		response.setCharacterEncoding("utf-8");
 		// 체인(필터) 사용법, 필터 여러개 있을수있음, 이필터 끝나면 다음꺼 해라 이런거
 		chain.doFilter(request, response);
+		
+		
 	}
 }
