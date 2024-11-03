@@ -48,6 +48,18 @@ public class Ex01Controller extends HttpServlet {
 			out.println("제목  : " + title + "가격" + price + "원 설명 : " + description);
 			}
 			
+			statement.close();
+			
+			statement = connection.createStatement();
+			
+//			String query = "INSERT INTO `used_goods`\r\n"
+//					+ "(`sellerId`, `title`,`price`,`description`)\r\n"
+//					+ "VALUE\r\n"
+//					+ "(3,'고양이 간식 팝니다', 2000, '우리집 고양이가 안먹어서 팔아요');";
+//			
+//			// 실행된 행의 개수 리턴
+//			int count = statement.executeUpdate(query);
+//			out.println("삽입결과 : " + count);
 			
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
